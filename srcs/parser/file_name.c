@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:06:38 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/10 21:56:09 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/10 22:15:55 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 static bool	check_file_name(char *file_name)
 {
-	size_t	len;
+	char	*is_dot;
 
-	len = ft_strlen(file_name);
-	if (len < 5)
+	is_dot = ft_strrchr(file_name, '.');
+	if (!is_dot)
 		return (false);
-	if (ft_strncmp(&file_name[len - 4], ".cub", 4) != 0)
+	if (ft_strcmp(is_dot, ".cub") != 0)
 		return (false);
 	return (true);
 }
