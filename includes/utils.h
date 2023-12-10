@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:24:57 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/09 20:31:47 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/10 22:25:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # define ERROR_ARGV "Incorrect file name entered.\n"
 
 // open.c
+void	check_and_exit_if_directory(char *file);
 int		open_file_and_return_descriptor(char *file);
 
 // print_error.c
