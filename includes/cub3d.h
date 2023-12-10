@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:04:40 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/10 22:13:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/10 23:05:16 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include "parser.h"
+# include "structures.h"
 # include "utils.h"
 
 #endif
