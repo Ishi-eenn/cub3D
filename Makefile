@@ -1,8 +1,8 @@
 NAME		=	cub3D
 CC			=	cc
 INCLUDE 	=	-I ./includes -I./libft/includes
-CFLAGS		=	-Wall -Wextra -Werror
-# CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g -I$(INCLUDE)
+# CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address
 RM			=	rm -rf
 
 LIBFT_DIR	=	./libft
@@ -10,7 +10,9 @@ LIBS		=	-L./libft -lft
 
 PARSER_DIR	=	parser
 PARSER		=	file_name.c \
-				open_file.c
+				open_file.c \
+				parser.c \
+				texture_path.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
