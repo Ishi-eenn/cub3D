@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 22:47:39 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/10 23:21:19 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/11 01:38:07 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ struct s_texture_path
 
 struct s_room_color
 {
-	int	floor_color;
-	int	ceiling_color;
+	int	floor;
+	int	ceiling;
 };
 
 struct s_data

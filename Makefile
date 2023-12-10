@@ -10,13 +10,16 @@ LIBS		=	-L./libft -lft
 
 PARSER_DIR	=	parser
 PARSER		=	file_name.c \
+				line_operations.c \
 				open_file.c \
 				parser.c \
+				room_color.c \
 				texture_path.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
-UTIL		=	open.c \
+UTIL		=	is_overflow.c \
+				open.c \
 				print_error.c
 UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
