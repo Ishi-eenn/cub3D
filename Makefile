@@ -9,7 +9,8 @@ LIBFT_DIR	=	./libft
 LIBS		=	-L./libft -lft
 
 PARSER_DIR	=	parser
-PARSER		=	file_name.c
+PARSER		=	file_name.c \
+				open_file.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
