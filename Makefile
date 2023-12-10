@@ -1,8 +1,8 @@
 NAME		=	cub3D
 CC			=	cc
 INCLUDE 	=	-I ./includes -I./libft/includes
-# CFLAGS		=	-Wall -Wextra -Werror
-CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address
+CFLAGS		=	-Wall -Wextra -Werror
+# CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address
 RM			=	rm -rf
 
 LIBFT_DIR	=	./libft

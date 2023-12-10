@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:04:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/11 00:10:06 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/11 01:07:56 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
-	validate_input_file(argc, argv);
-	title(open_file_descriptor_for_non_directory(argv[1]), &data);
+	parser(&data, argc, argv);
 	printf("==========================================\n");
 	printf("north = %s\n", data.texture_path->north);
 	printf("south = %s\n", data.texture_path->south);
