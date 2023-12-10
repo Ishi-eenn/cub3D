@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   file_name.c                                        :+:      :+:    :+:   */
+/*   open.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 20:06:38 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/10 21:56:09 by tsishika         ###   ########.fr       */
+/*   Created: 2023/12/09 20:24:40 by tsishika          #+#    #+#             */
+/*   Updated: 2023/12/09 20:25:58 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "utils.h"
 
-static bool	check_file_name(char *file_name)
+int	open_file_and_return_descriptor(char *file)
 {
-	size_t	len;
+	int	fd;
 
-	len = ft_strlen(file_name);
-	if (len < 5)
-		return (false);
-	if (ft_strncmp(&file_name[len - 4], ".cub", 4) != 0)
-		return (false);
-	return (true);
-}
-
-void	validate_input_file(int argc, char **argv)
-{
-	if (argc != 2)
-		print_error_and_exit(ERROR_ARGC);
-	if (!check_file_name(argv[1]))
-		return (print_error_and_exit(ERROR_ARGV));
+	fd = open(file, O_RDONLY);
+	if (fd == -1)
+		print_perror_and_exit(file);
+	return (fd);
 }

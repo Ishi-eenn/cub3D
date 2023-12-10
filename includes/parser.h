@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parser.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 20:04:58 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/10 21:55:51 by tsishika         ###   ########.fr       */
+/*   Created: 2023/12/09 20:13:27 by tsishika          #+#    #+#             */
+/*   Updated: 2023/12/10 21:55:04 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#ifndef PARSER_H
+# define PARSER_H
 
-int	main(int argc, char **argv)
-{
-	validate_input_file(argc, argv);
-	open_file_and_return_descriptor(argv[1]);
-}
+# include "stdbool.h"
+# include "stdio.h"
+
+# include "utils.h"
+
+void	validate_input_file(int argc, char **argv);
+
+#endif

@@ -8,12 +8,25 @@ RM			=	rm -rf
 LIBFT_DIR	=	./libft
 LIBS		=	-L./libft -lft
 
+GNL_DIR		=	get_next_line
+GNL			=	get_next_line.c \
+				get_next_line_utils.c
+GNLS		=	$(addprefix $(GNL_DIR)/, $(GNL))
+
 PARSER_DIR	=	parser
 PARSER		=	file_name.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
+UTIL_DIR	=	utils
+UTIL		=	open.c \
+				print_error.c
+UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
+
 SRC_DIR		=	srcs
-SRC			=	main.c
+SRC			=	main.c \
+				$(GNLS) \
+				$(PARSERS) \
+				$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR		=	objs
