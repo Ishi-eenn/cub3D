@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:39:44 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/11 00:45:38 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/11 00:53:44 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,12 @@ void	parse_and_set_texture_path(t_data *data, char *line)
 	truncate_at_newline(line);
 	if (ft_strncmp(line, "NO ", 3) == 0)
 		data->texture_path->north = duplicate_texture_input(line);
-	if (ft_strncmp(line, "SO ", 3) == 0)
+	else if (ft_strncmp(line, "SO ", 3) == 0)
 		data->texture_path->south = duplicate_texture_input(line);
-	if (ft_strncmp(line, "WE ", 3) == 0)
+	else if (ft_strncmp(line, "WE ", 3) == 0)
 		data->texture_path->west = duplicate_texture_input(line);
-	if (ft_strncmp(line, "EA ", 3) == 0)
+	else if (ft_strncmp(line, "EA ", 3) == 0)
 		data->texture_path->east = duplicate_texture_input(line);
+	else
+		print_error_and_exit("Texture input is incorrect.");
 }
