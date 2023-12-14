@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:24:57 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/11 02:39:06 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/14 10:27:48 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@
 
 # define ERROR_ARGC "The number of arguments is incorrect.\n"
 # define ERROR_ARGV "Incorrect file name entered.\n"
+
+// ft_realloc.c
+void	ft_realloc(char **str, size_t size);
 
 // is_overflow.c
 bool	is_atoi_overflow(char *line);

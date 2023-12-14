@@ -18,7 +18,8 @@ PARSER		=	file_name.c \
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
-UTIL		=	is_overflow.c \
+UTIL		=	ft_realloc.c \
+				is_overflow.c \
 				open.c \
 				print_error.c
 UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
