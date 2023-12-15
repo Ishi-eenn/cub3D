@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 00:39:44 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/15 15:42:21 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/15 16:08:09 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ void	parse_and_set_texture_path_from_fd(int fd, t_data *data)
 	char	*line;
 
 	data->texture_path = malloc(sizeof(t_texture_path));
-	printf("data->texture_path = %p\n", data->texture_path);
 	if (!data->texture_path)
 		print_error_and_exit("malloc error");
 	i = 0;
