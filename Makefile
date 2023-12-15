@@ -11,8 +11,10 @@ LIBS		=	-L./libft -lft
 PARSER_DIR	=	parser
 PARSER		=	file_name.c \
 				line_operations.c \
+				map.c \
 				open_file.c \
 				parser.c \
+				rgb_handling.c \
 				room_color.c \
 				texture_path.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
@@ -21,7 +23,8 @@ UTIL_DIR	=	utils
 UTIL		=	ft_realloc.c \
 				is_overflow.c \
 				open.c \
-				print_error.c
+				print_error.c \
+				rgb.c
 UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:24:57 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/14 10:27:48 by tsishika         ###   ########.fr       */
+/*   Updated: 2023/12/15 15:56:42 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define ERROR_ARGV "Incorrect file name entered.\n"
 
 // ft_realloc.c
-void	ft_realloc(char **str, size_t size);
+// char **ft_realloc(char **prev, size_t i);
 
 // is_overflow.c
 bool	is_atoi_overflow(char *line);
@@ -39,5 +39,8 @@ void	print_error(char *str);
 void	print_perror(char *str);
 void	print_error_and_exit(char *str);
 void	print_perror_and_exit(char *str);
+
+// rgb.c
+int	combine_rgb_components(char *red, char *green, char *blue);
 
 #endif
