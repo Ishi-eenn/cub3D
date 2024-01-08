@@ -6,15 +6,15 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 20:13:27 by tsishika          #+#    #+#             */
-/*   Updated: 2023/12/15 16:05:37 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/01/08 13:38:55 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSER_H
 # define PARSER_H
 
-# include "stdbool.h"
-# include "stdio.h"
+# include <stdbool.h>
+# include <stdio.h>
 
 # include "utils.h"
 # include "libft.h"
