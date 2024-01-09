@@ -19,10 +19,15 @@ PARSER		=	file_name.c \
 				texture_path.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
+RAYCASTING_DIR	=	raycasting
+RAYCASTING		=	init_vector.c
+RAYCASTINGS		=	$(addprefix $(RAYCASTING_DIR)/, $(RAYCASTING))
+
 SRC_DIR		=	srcs
 SRC			=	main.c \
 				$(PARSERS) \
-				$(UTILS)
+				$(UTILS)\
+				$(RAYCASTINGS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR = objs
