@@ -1,17 +1,21 @@
 NAME = cub3D
+CFLAGS = -Wall -Wextra -Werror -MP -MMD -O3
+RM = rm -rf
+INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
+LIBFT = libft/libft.a
+
+UTIL_DIR	=	utils
+UTIL			= print_error.c
+UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
-SRC			=	main.c
+SRC			=	main.c \
+					$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR = objs
 OBJS := $(subst $(SRC_DIR), $(OBJ_DIR), $(SRCS:.c=.o))
 DEPS = $(OBJS:.o=.d)
-
-CFLAGS = -Wall -Wextra -Werror -MP -MMD -O3
-RM = rm -rf
-INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
-LIBFT = libft/libft.a
 
 ifeq ($(MAKECMDGOALS), debug)
 	CFLAGS += -DDEBUG

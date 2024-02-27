@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   parser.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:07:18 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:21:21 by tsishika         ###   ########.fr       */
+/*   Created: 2024/02/27 17:29:22 by tsishika          #+#    #+#             */
+/*   Updated: 2024/02/27 17:29:35 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
-
-#include "libft.h"
-#include "mlx.h"
-#include "struct.h"
-#include "utils.h"
-
-#include <libc.h>
+#ifndef PARSER_H
+# define PARSER_H
 
 #endif
