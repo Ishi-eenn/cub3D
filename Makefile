@@ -4,12 +4,17 @@ RM = rm -rf
 INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
 LIBFT = libft/libft.a
 
+PARSER_DIR	=	parser
+PARSER			= parser.c
+PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
+
 UTIL_DIR	=	utils
 UTIL			= print_error.c
 UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
 SRC			=	main.c \
+					$(PARSERS) \
 					$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
