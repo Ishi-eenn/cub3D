@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   open.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:20:28 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:57:17 by tsishika         ###   ########.fr       */
+/*   Created: 2024/02/27 17:56:45 by tsishika          #+#    #+#             */
+/*   Updated: 2024/02/27 17:57:28 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "utils.h"
 
-#include "libft.h"
+void	check_and_exit_if_directory(char *file)
+{
+	int	fd;
 
-# include <fcntl.h>
-# include <errno.h>
-# include <stdio.h>
+	fd = open(file, O_DIRECTORY);
+	if (0 <= fd)
+	{
+		close(fd);
+		print_perror_and_exit(file);
+	}
+}
 
-void	print_error(char *str);
-void	print_perror(char *str);
-void	print_error_and_exit(char *str);
-void	print_perror_and_exit(char *str);
+int	open_file_and_return_descriptor(char *file)
+{
+	int	fd;
 
-#endif
+	fd = open(file, O_RDONLY);
+	if (fd == -1)
+		print_perror_and_exit(file);
+	return (fd);
+}

@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   file_name.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:07:18 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:54:11 by tsishika         ###   ########.fr       */
+/*   Created: 2024/02/27 17:51:57 by tsishika          #+#    #+#             */
+/*   Updated: 2024/02/27 17:58:27 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
-
-#include "libft.h"
-#include "mlx.h"
-
 #include "parser.h"
-#include "struct.h"
-#include "utils.h"
 
-#include <libc.h>
+static bool	check_file_name(char *file_name)
+{
+	char	*is_dot;
 
-#endif
+	is_dot = ft_strrchr(file_name, '.');
+	if (!is_dot)
+		return (false);
+	if (ft_strcmp(is_dot, ".cub") != 0)
+		return (false);
+	return (true);
+}
+
+void	validate_input_file(int argc, char **argv)
+{
+	if (argc != 2)
+		print_error_and_exit(ERROR_ARGC);
+	if (!check_file_name(argv[1]))
+		return (print_error_and_exit(ERROR_ARGV));
+}
