@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:05:39 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/02/27 17:08:10 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libc.h>
+#include "cub3d.h"
 
 int main()
 {
