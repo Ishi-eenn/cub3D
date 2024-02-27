@@ -23,6 +23,8 @@ endif
 
 all : $(NAME)
 
+bonus : all
+
 $(NAME): $(OBJS)
 	$(MAKE) -C ./libft
 	$(MAKE) -C ./mlx
