@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   file_name.c                                        :+:      :+:    :+:   */
+/*   is_overflow.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:51:57 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 00:56:20 by tsishika         ###   ########.fr       */
+/*   Created: 2023/12/11 02:31:11 by tsishika          #+#    #+#             */
+/*   Updated: 2024/02/28 00:54:47 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "utils.h"
 
-static bool	check_file_name(char *file_name)
+bool	is_atoi_overflow(char *line)
 {
-	char	*is_dot;
+	long	n;
 
-	is_dot = ft_strrchr(file_name, '.');
-	if (!is_dot)
-		return (false);
-	if (ft_strcmp(is_dot, ".cub") != 0)
-		return (false);
-	return (true);
+	n = ft_strtol(line);
+	if (n > INT_MAX || n < INT_MIN)
+		return (true);
+	return (false);
 }
 
-void	validate_input_file(int argc, char **argv)
+bool	is_rgb_overflow(char *rgb)
 {
-	if (argc != 2)
-		print_error_and_exit(ERROR_ARGC);
-	if (!check_file_name(argv[1]))
-		return (print_error_and_exit(ERROR_ARGV));
+	int	n;
+
+	n = ft_atoi(rgb);
+	if (n > 255 || n < 0)
+		return (true);
+	return (false);
 }
