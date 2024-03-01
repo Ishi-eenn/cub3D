@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 03:26:49 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:11:54 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 04:43:36 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,30 @@ static size_t	validate_map_length(t_list *list)
 	return (len);
 }
 
-static char	**list_to_string_array(t_list *list)
+static char	**list_to_string_array(t_list *list, t_data *data)
 {
 	char	**map;
-	size_t	i;
+	size_t	height;
+	size_t	width;
 
-	i = validate_map_length(list);
-	map = malloc(sizeof(char *) * (i + 1));
+	height = validate_map_length(list);
+	data->cub->map->height = height;
+	map = malloc(sizeof(char *) * (height + 1));
 	if (map == NULL)
 		print_error_and_exit("malloc failed");
-	i = 0;
+	height = 0;
 	while (list)
 	{
-		map[i] = ft_strdup((char *)list->content);
+		width = ft_strlen((char *)list->content);
+		map[height] = ft_strdup((char *)list->content);
+		if (map[height] == NULL)
+			print_error_and_exit("malloc failed");
+		if (width > data->cub->map->width)
+			data->cub->map->width = width;
 		list = list->next;
-		i++;
+		height++;
 	}
-	map[i] = NULL;
+	map[height] = NULL;
 	return (map);
 }
 
@@ -85,6 +92,6 @@ void	parse_and_set_map_from_fd(t_data *data, int fd)
 	if (data->cub->map == NULL)
 		print_error_and_exit("Memory allocation failed.");
 	list = read_lines_into_linked_list(fd);
-	data->cub->map->map_data = list_to_string_array(list);
+	data->cub->map->map_data = list_to_string_array(list, data);
 	ft_lstclear(&list, free);
 }

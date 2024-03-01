@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:10:28 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 04:46:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	print_test(t_data *data)
 	printf("floor = %d\n", data->cub->room_color->floor);
 	printf("ceiling = %d\n", data->cub->room_color->ceiling);
 	printf("==========================================\n");
+	printf("map_width = %zu\n", data->cub->map->width);
+	printf("map_height = %zu\n", data->cub->map->height);
 	i = 0;
 	while (data->cub->map->map_data[i])
 	{

@@ -6,18 +6,29 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:09:01 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 04:45:20 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCT_H
 # define STRUCT_H
 
+typedef struct s_vector			t_vector;
 typedef struct s_texture_path	t_texture_path;
 typedef struct s_room_color		t_room_color;
 typedef struct s_map			t_map;
 typedef struct s_cub			t_cub;
 typedef struct s_data			t_data;
+
+struct s_vector
+{
+	double	pos_x;
+	double	pos_y;
+	double	dir_x;
+	double	dir_y;
+	double	pln_x;
+	double	pln_y;
+};
 
 struct s_texture_path
 {
@@ -35,8 +46,8 @@ struct s_room_color
 
 struct s_map
 {
-	int		width;
-	int		height;
+	size_t	width;
+	size_t	height;
 	char	**map_data;
 };
 
