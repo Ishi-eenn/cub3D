@@ -6,12 +6,14 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/02 04:45:20 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 05:26:38 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCT_H
 # define STRUCT_H
+
+# include <stddef.h>
 
 typedef struct s_vector			t_vector;
 typedef struct s_texture_path	t_texture_path;

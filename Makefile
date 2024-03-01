@@ -3,24 +3,29 @@ CFLAGS = -Wall -Wextra -Werror -MP -MMD -O3
 RM = rm -rf
 INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
 LIBFT = libft/libft.a
+CC = cc
+
+MAP_DIR		=	map
+MAP			=	line_operations.c \
+				map.c
+MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 
 PARSER_DIR	=	parser
-PARSER			= file_name.c \
-							line_operations.c \
-							map.c \
-							open_file.c \
-							parser.c \
-							rgb_handling.c \
-							room_color.c \
-							texture_path.c
+PARSER		=	$(MAPS) \
+				file_name.c \
+				open_file.c \
+				parser.c \
+				rgb_handling.c \
+				room_color.c \
+				texture_path.c
 PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
-UTIL			= cub_free.c \
-						is_overflow.c \
-						open.c \
-						print_error.c \
-						rgb.c
+UTIL		=	cub_free.c \
+				is_overflow.c \
+				open.c \
+				print_error.c \
+				rgb.c
 UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
