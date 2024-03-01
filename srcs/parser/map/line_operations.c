@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 00:30:55 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:15:11 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 05:33:19 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "map.h"
 
 void	truncate_at_newline(char *line)
 {

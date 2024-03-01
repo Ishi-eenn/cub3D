@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 03:26:49 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/02 04:43:36 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 05:33:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "map.h"
 
 static char	*get_and_truncate_next_line(int fd, bool is_head)
 {

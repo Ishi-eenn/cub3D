@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:29:22 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/02 05:25:57 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/02 05:34:34 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 
 # define ERROR_ARGC "The number of arguments is incorrect.\n"
 # define ERROR_ARGV "Incorrect file name entered.\n"
-
-# define MAX_MAP_LINE_LENGTH 200
 
 // file_name.c
 void	validate_input_file(int argc, char **argv);
