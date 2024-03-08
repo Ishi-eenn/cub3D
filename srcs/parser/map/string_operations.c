@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 21:20:37 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 21:23:34 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:29:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,3 @@ char	*get_string_after_space(char *line)
 		string_after_space++;
 	return (string_after_space);
 }
-
-
