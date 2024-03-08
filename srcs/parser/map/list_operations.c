@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 21:20:33 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 21:24:26 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:52:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,26 +50,20 @@ t_list	*read_lines_into_linked_list(int fd)
 char	**list_to_string_array(t_list *list, t_data *data)
 {
 	char	**map;
-	size_t	height;
-	size_t	width;
+	size_t	i;
 
-	height = validate_map_length(list);
-	data->cub->map->height = height;
-	map = malloc(sizeof(char *) * (height + 1));
+	map = malloc(sizeof(char *) * (data->cub->map->height + 1));
 	if (map == NULL)
 		print_error_and_exit("malloc failed");
-	height = 0;
+	i = 0;
 	while (list)
 	{
-		width = ft_strlen((char *)list->content);
-		map[height] = ft_strdup((char *)list->content);
-		if (map[height] == NULL)
+		map[i] = ft_strdup((char *)list->content);
+		if (map[i] == NULL)
 			print_error_and_exit("malloc failed");
-		if (width > data->cub->map->width)
-			data->cub->map->width = width;
 		list = list->next;
-		height++;
+		i++;
 	}
-	map[height] = NULL;
+	map[i] = NULL;
 	return (map);
 }

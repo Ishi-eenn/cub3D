@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   size.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/08 21:37:48 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/08 21:50:54 by tsishika         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "map.h"
+
+static void calculate_max_string_length_in_list(t_data *data, t_list *list)
+{
+	size_t width;
+
+	while(list)
+	{
+		width = ft_strlen(list->content);
+		if (width > data->cub->map->width)
+			data->cub->map->width = width;
+		list = list->next;
+	}
+}
+
+static void set_map_height_in_list(t_data *data, t_list *list)
+{
+	data->cub->map->height = ft_lstsize(list);
+}
+
+void validate_and_set_map_properties(t_data *data, t_list *list)
+{
+	calculate_max_string_length_in_list(data, list);
+	set_map_height_in_list(data, list);
+	if (data->cub->map->width > MAX_MAP_LINE_LENGTH || data->cub->map->height > MAX_MAP_LINE_LENGTH)
+		print_error_and_exit("Map is too long.\n");
+}

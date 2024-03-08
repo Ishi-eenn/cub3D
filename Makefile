@@ -8,6 +8,7 @@ CC = cc
 MAP_DIR		=	map
 MAP			=	list_operations.c \
 				parser.c \
+				size.c \
 				string_operations.c \
 				validation.c
 MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
