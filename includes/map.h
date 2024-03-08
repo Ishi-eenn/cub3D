@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 05:22:07 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 21:48:45 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:55:06 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	truncate_at_newline(char *line);
 char	*get_string_after_space(char *line);
 
 // validation.c
-size_t	validate_map_length(t_list *list);
 void	validate_and_exit_if_not_empty(int fd);
 
 #endif
