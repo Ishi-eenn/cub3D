@@ -6,8 +6,10 @@ LIBFT = libft/libft.a
 CC = cc
 
 MAP_DIR		=	map
-MAP			=	line_operations.c \
-				map.c
+MAP			=	list_operations.c \
+				parser.c \
+				string_operations.c \
+				validation.c
 MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 
 PARSER_DIR	=	parser
