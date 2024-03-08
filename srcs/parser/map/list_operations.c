@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 21:20:33 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 21:52:30 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/08 22:15:21 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,25 +45,4 @@ t_list	*read_lines_into_linked_list(int fd)
 		list = list->next;
 	}
 	return (head);
-}
-
-char	**list_to_string_array(t_list *list, t_data *data)
-{
-	char	**map;
-	size_t	i;
-
-	map = malloc(sizeof(char *) * (data->cub->map->height + 1));
-	if (map == NULL)
-		print_error_and_exit("malloc failed");
-	i = 0;
-	while (list)
-	{
-		map[i] = ft_strdup((char *)list->content);
-		if (map[i] == NULL)
-			print_error_and_exit("malloc failed");
-		list = list->next;
-		i++;
-	}
-	map[i] = NULL;
-	return (map);
 }

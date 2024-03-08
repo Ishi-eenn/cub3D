@@ -6,7 +6,8 @@ LIBFT = libft/libft.a
 CC = cc
 
 MAP_DIR		=	map
-MAP			=	list_operations.c \
+MAP			=	create_map_data.c \
+				list_operations.c \
 				parser.c \
 				size.c \
 				string_operations.c \
