@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 22:13:52 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/08 22:35:04 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ int	main(int argc, char **argv)
 	cub_free(&cub);
 }
 
-__attribute__((destructor)) static void destructor() {
-	system("leaks -q cub3D");
-}
+// __attribute__((destructor)) static void destructor() {
+// 	system("leaks -q cub3D");
+// }
