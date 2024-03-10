@@ -6,13 +6,13 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:38:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 18:05:27 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 20:53:26 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "map.h"
 
-bool	title3(t_data *data, size_t x_i, size_t y_i)
+static bool	is_walkable_tile(t_data *data, size_t x_i, size_t y_i)
 {
 	char	**map;
 	size_t	width;
@@ -30,27 +30,28 @@ bool	title3(t_data *data, size_t x_i, size_t y_i)
 	map[y_i][x_i + 1] == ' '));
 }
 
-void	title2(t_data *data, size_t y_i)
+static void	check_if_row_contains_walkable_tiles(t_data *data, size_t y_i)
 {
 	size_t	x_i;
 
 	x_i = 0;
 	while (x_i < data->cub->map->width)
 	{
-		if (title3(data, x_i, y_i))
+		if (is_walkable_tile(data, x_i, y_i))
 			print_error_and_exit("Map is not closed or not valid\n");
 		x_i++;
 	}
 }
 
-void	title(t_data *data)
+void	validate_map_walkability(t_data *data)
 {
 	size_t	y_i;
 
 	y_i = 0;
 	while (y_i < data->cub->map->height)
 	{
-		title2(data, y_i);
+		check_if_row_contains_walkable_tiles(data, y_i);
 		y_i++;
 	}
+	printf("success\n");
 }
