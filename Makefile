@@ -6,7 +6,8 @@ LIBFT = libft/libft.a
 CC = cc
 
 MAP_DIR		=	map
-MAP			=	create_map_data.c \
+MAP			=	check_closed.c \
+				create_map_data.c \
 				list_operations.c \
 				parser.c \
 				size.c \
@@ -34,8 +35,8 @@ UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
 SRC			=	main.c \
-					$(PARSERS) \
-					$(UTILS)
+				$(PARSERS) \
+				$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR = objs
