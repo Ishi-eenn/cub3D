@@ -17,7 +17,10 @@ MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 PARSER_DIR	=	parser
 PARSER		=	$(MAPS) \
 				check_closed.c \
+				check_map.c \
+				check_prayer.c \
 				file_name.c \
+				init_vector.c \
 				open_file.c \
 				parser.c \
 				rgb_handling.c \

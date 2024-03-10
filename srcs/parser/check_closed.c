@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:38:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 21:06:44 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:12:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,4 @@ void	validate_map_walkability(t_data *data)
 		check_if_row_contains_walkable_tiles(data, y_i);
 		y_i++;
 	}
-	printf("success\n");
 }

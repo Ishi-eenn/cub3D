@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/02 05:26:38 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:10:46 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ typedef struct s_data			t_data;
 
 struct s_vector
 {
-	double	pos_x;
-	double	pos_y;
-	double	dir_x;
-	double	dir_y;
-	double	pln_x;
-	double	pln_y;
+	double	position_x;
+	double	position_y;
+	double	direction_x;
+	double	direction_y;
+	double	plane_x;
+	double	plane_y;
 };
 
 struct s_texture_path
@@ -62,7 +62,8 @@ struct s_cub
 
 struct s_data
 {
-	t_cub	*cub;
+	t_cub		*cub;
+	t_vector	*vector;
 };
 
 #endif

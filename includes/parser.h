@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:29:22 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 21:06:30 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:19:00 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,16 @@
 // check_closed.c
 void	validate_map_walkability(t_data *data);
 
+// check_map.c
+
+// check_player.c
+void	title(t_data *data);
+
 // file_name.c
 void	validate_input_file(int argc, char **argv);
+
+// init_vector.c
+void	init_vector(t_data *data, char c, int x, int y);
 
 // open_file.c
 int		open_file_descriptor_for_non_directory(char *file);

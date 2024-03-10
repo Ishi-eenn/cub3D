@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:20:28 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 21:18:04 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:20:10 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 void	cub_free(t_cub *cub);
 
 // find_occurrence.c
-char	*find_first_occurrence(const char *s, int c);
+char	*find_occurrence(const char *s, int c);
 
 // is_overflow.c
 bool	is_atoi_overflow(char *line);
