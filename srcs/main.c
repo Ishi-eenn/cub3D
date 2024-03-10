@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 22:35:04 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:15:59 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,14 @@ void	print_test(t_data *data)
 
 int	main(int argc, char **argv)
 {
-	t_data	data;
-	t_cub	cub;
+	t_data		data;
+	t_cub		cub;
+	t_vector	vector;
 
 	if (argc != 2)
 		print_error_and_exit(ERROR_ARGC);
 	data.cub = &cub;
+	data.vector = &vector;
 	parser(argc, argv, &data);
 	print_test(&data);
 	cub_free(&cub);
