@@ -6,48 +6,51 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:38:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 17:56:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:05:27 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "map.h"
 
-bool title3(t_data *data, size_t x, size_t y)
+bool	title3(t_data *data, size_t x_i, size_t y_i)
 {
-	return (data->cub->map->map_data[y][x] == '0' && (x == 0 || y == 0 || x == data->cub->map->width - 1 || y == data->cub->map->height - 1 ||
-	data->cub->map->map_data[y - 1][x] == ' ' || data->cub->map->map_data[y + 1][x] == ' ' || data->cub->map->map_data[y][x - 1] == ' ' || data->cub->map->map_data[y][x + 1] == ' '));
+	char	**map;
+	size_t	width;
+	size_t	height;
+
+	map = data->cub->map->map_data;
+	width = data->cub->map->width - 1;
+	height = data->cub->map->height - 1;
+	return (map[y_i][x_i] == '0' &&
+	(x_i == 0 || y_i == 0 ||
+	x_i == width || y_i == height ||
+	map[y_i - 1][x_i] == ' ' ||
+	map[y_i + 1][x_i] == ' ' ||
+	map[y_i][x_i - 1] == ' ' ||
+	map[y_i][x_i + 1] == ' '));
 }
 
-void title2(t_data *data, size_t y){
-	size_t	x;
+void	title2(t_data *data, size_t y_i)
+{
+	size_t	x_i;
 
-	x = 0;
-	while(x < data->cub->map->width){
-		if (title3(data, x, y))
-			print_error_and_exit("Map is not closed or not valid");
-		x++;
+	x_i = 0;
+	while (x_i < data->cub->map->width)
+	{
+		if (title3(data, x_i, y_i))
+			print_error_and_exit("Map is not closed or not valid\n");
+		x_i++;
 	}
 }
 
-// void title2(t_data *data, size_t y){
-// 	size_t	x;
+void	title(t_data *data)
+{
+	size_t	y_i;
 
-// 	x = 0;
-// 	while(x < data->cub->map->width){
-// 		if (data->cub->map->map_data[y][x] == '0' && (x == 0 || y == 0 || x == data->cub->map->width - 1 || y == data->cub->map->height - 1 ||
-// 		data->cub->map->map_data[y - 1][x] == ' ' || data->cub->map->map_data[y + 1][x] == ' ' || data->cub->map->map_data[y][x - 1] == ' ' || data->cub->map->map_data[y][x + 1] == ' '))
-// 		print_error_and_exit("Map is not closed or not valid");
-// 		x++;
-// 	}
-// }
-
-void title(t_data *data){
-	size_t	y;
-
-	y = 0;
-	while(y < data->cub->map->height){
-		title2(data, y);
-		y++;
+	y_i = 0;
+	while (y_i < data->cub->map->height)
+	{
+		title2(data, y_i);
+		y_i++;
 	}
-	printf("success\n");
 }
