@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 05:22:07 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 20:52:51 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/10 21:06:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 
 # define MAX_MAP_WIDTH 200
 # define MAX_MAP_HEIGHT 200
-
-// check_closed.c
-void	validate_map_walkability(t_data *data);
 
 // create_map_data.c
 char	**convert_list_to_aligned_string_array(t_list *list, t_data *data);

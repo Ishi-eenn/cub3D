@@ -6,8 +6,7 @@ LIBFT = libft/libft.a
 CC = cc
 
 MAP_DIR		=	map
-MAP			=	check_closed.c \
-				create_map_data.c \
+MAP			=	create_map_data.c \
 				list_operations.c \
 				parser.c \
 				size.c \
@@ -17,6 +16,7 @@ MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 
 PARSER_DIR	=	parser
 PARSER		=	$(MAPS) \
+				check_closed.c \
 				file_name.c \
 				open_file.c \
 				parser.c \
@@ -27,6 +27,7 @@ PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
 UTIL		=	cub_free.c \
+				find_occurrence.c \
 				is_overflow.c \
 				open.c \
 				print_error.c \
