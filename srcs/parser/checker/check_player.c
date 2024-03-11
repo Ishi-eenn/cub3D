@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_prayer.c                                     :+:      :+:    :+:   */
+/*   check_player.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:09:25 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 22:20:01 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/11 21:35:11 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "checker.h"
 
-void	title2(t_data *data, size_t y_i, bool *player_found)
+void	find_and_init_player(t_data *data, size_t y_i, bool *player_found)
 {
 	size_t	x_i;
 
@@ -32,7 +32,7 @@ void	title2(t_data *data, size_t y_i, bool *player_found)
 	}
 }
 
-void	title(t_data *data)
+void	scan_map_and_check_player(t_data *data)
 {
 	size_t	y_i;
 	bool	player_found;
@@ -41,7 +41,7 @@ void	title(t_data *data)
 	player_found = false;
 	while (y_i < data->cub->map->height)
 	{
-		title2(data, y_i, &player_found);
+		find_and_init_player(data, y_i, &player_found);
 		y_i++;
 	}
 	if (!player_found)

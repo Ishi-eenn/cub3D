@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:38:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 22:12:37 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/11 21:35:08 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "checker.h"
 
 static bool	is_walkable_tile(t_data *data, size_t x_i, size_t y_i)
 {
