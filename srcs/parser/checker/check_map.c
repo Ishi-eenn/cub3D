@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:29:00 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/11 21:35:43 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/10 21:25:23 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/11 21:37:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parser.h"
+#include "checker.h"
 
-void	parser(int argc, char **argv, t_data *data)
+void	check_input_data(t_data *data)
 {
-	int	fd;
-
-	validate_input_file(argc, argv);
-	fd = open_file_descriptor_for_non_directory(argv[1]);
-	parse_and_set_texture_path_from_fd(fd, data);
-	validate_and_exit_if_not_empty(fd);
-	parse_and_set_room_colors_from_fd(data, fd);
-	validate_and_exit_if_not_empty(fd);
-	parse_and_set_map_from_fd(data, fd);
-	close(fd);
-	check_input_data(data);
+	validate_map_walkability(data);
+	scan_map_and_check_player(data);
 }

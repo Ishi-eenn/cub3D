@@ -14,11 +14,15 @@ MAP			=	create_map_data.c \
 				validation.c
 MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 
-PARSER_DIR	=	parser
-PARSER		=	$(MAPS) \
-				check_closed.c \
+CHECKER_DIR	=	checker
+CHECKER		=	check_closed.c \
 				check_map.c \
-				check_prayer.c \
+				check_player.c
+CHECKERS	=	$(addprefix $(CHECKER_DIR)/, $(CHECKER))
+
+PARSER_DIR	=	parser
+PARSER		=	$(CHECKERS) \
+				$(MAPS) \
 				file_name.c \
 				init_vector.c \
 				open_file.c \
