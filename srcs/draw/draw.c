@@ -6,11 +6,29 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:24:00 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:46:12 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "draw.h"
+
+int closed_window(t_mlx *mlx)
+{
+	mlx_clear_window(mlx->mlx, mlx->win);
+	mlx_destroy_window(mlx->mlx, mlx->win);
+	exit(0);
+}
+
+int key_press(int keycode, t_data *data)
+{
+	if (keycode == 53)
+	{
+		mlx_clear_window(data->mlx->mlx, data->mlx->win);
+		mlx_destroy_window(data->mlx->mlx, data->mlx->win);
+		exit(0);
+	}
+	return (0);
+}
 
 void draw(t_data *data)
 {
@@ -23,5 +41,10 @@ void draw(t_data *data)
 	// その他のmlx系の初期化
 	// mlx_loop_hookとかで描画
 	// mlx_hookとかでイベント処理
+
+	// 第3引数なんだっけ？
+	// mlx_hook(data->mlx->win, 2, 0, key_press, data);
+	mlx_hook(data->mlx->win, 2, 1L << 0, key_press, data);
+	mlx_hook(data->mlx->win, 17, 0, closed_window, data->mlx);
 	mlx_loop(data->mlx->mlx);
 }
