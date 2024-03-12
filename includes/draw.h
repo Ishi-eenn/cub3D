@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   draw.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:07:18 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:16:44 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/12 16:17:00 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#ifndef DRAW_H
+# define DRAW_H
 
-# include "libft.h"
+# include "struct.h"
 # include "mlx.h"
 
-# include "parser.h"
-# include "draw.h"
-# include "struct.h"
-# include "utils.h"
-
-# include <libc.h>
+// draw.c
+void draw(t_data *data);
 
 #endif

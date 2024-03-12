@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 17:07:18 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:16:44 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/12 16:14:35 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+#include "draw.h"
 
-# include "libft.h"
-# include "mlx.h"
-
-# include "parser.h"
-# include "draw.h"
-# include "struct.h"
-# include "utils.h"
-
-# include <libc.h>
-
-#endif
+void draw(t_data *data)
+{
+	data->mlx->mlx = mlx_init();
+	data->mlx->mlx = mlx_new_window(data->mlx->mlx, WINDOW_WIDTH, WINDOW_HEIGHT, "Cub3D");
+}

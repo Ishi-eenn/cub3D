@@ -5,6 +5,15 @@ INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
 LIBFT = libft/libft.a
 CC = cc
 
+RAY_DIR		=	ray
+RAY			=	init.c
+RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
+
+DRAW_DIR	=	draw
+DRAW		=	$(RAYS) \
+				draw.c
+DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
+
 MAP_DIR		=	map
 MAP			=	create_map_data.c \
 				list_operations.c \
@@ -43,6 +52,7 @@ UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
 SRC			=	main.c \
+				$(DRAWS) \
 				$(PARSERS) \
 				$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
