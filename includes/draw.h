@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:17:00 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:24:18 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DRAW_H
 
 # include "struct.h"
+# include "utils.h"
 # include "mlx.h"
 
 // draw.c
