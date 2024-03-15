@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:08:36 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:19:07 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,8 @@ struct s_mlx
 {
 	void	*mlx;
 	void	*win;
+	t_img	*img;
+	// texture系の何か
 };
 
 struct s_data
