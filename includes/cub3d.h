@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:07:18 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:07:32 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/12 16:16:44 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "mlx.h"
 
 # include "parser.h"
+# include "draw.h"
 # include "struct.h"
 # include "utils.h"
 

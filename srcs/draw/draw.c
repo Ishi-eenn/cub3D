@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   draw.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 21:33:07 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 22:50:20 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/15 22:48:03 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#include "draw.h"
 
-# include "stdbool.h"
-
-# include "struct.h"
-# include "utils.h"
-# include "parser.h"
-
-// check_closed.c
-void	validate_map_walkability(t_data *data);
-
-// check_map.c
-void	check_input_data(t_data *data);
-
-// check_player.c
-void	scan_map_and_check_player(t_data *data);
-
-#endif
+	// その他のmlx系の初期化
+	// mlx_loop_hookとかで描画
+	// mlx_hookとかでイベント処理
+void	draw(t_data *data)
+{
+	init_mlx(data);
+	mlx_hook(data->mlx->win, 2, 1L << 0, key_press, data);
+	mlx_hook(data->mlx->win, 17, 0, closed_window, data->mlx);
+	mlx_loop(data->mlx->mlx);
+}

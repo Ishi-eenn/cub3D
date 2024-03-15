@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 22:15:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 22:51:59 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,27 @@ void	print_test(t_data *data)
 	}
 }
 
+//初期化回り一時的
 int	main(int argc, char **argv)
 {
 	t_data		data;
 	t_cub		cub;
 	t_vector	vector;
+	t_mlx		mlx;
 
 	if (argc != 2)
 		print_error_and_exit(ERROR_ARGC);
 	data.cub = &cub;
 	data.vector = &vector;
+	data.mlx = &mlx;
 	parser(argc, argv, &data);
 	print_test(&data);
+	draw(&data);
 	cub_free(&cub);
 }
 
-// __attribute__((destructor)) static void destructor() {
-// 	system("leaks -q cub3D");
-// }
+#ifdef DEBUG
+__attribute__((destructor)) static void destructor() {
+	system("leaks -q cub3D");
+}
+#endif
