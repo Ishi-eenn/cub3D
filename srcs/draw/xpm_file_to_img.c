@@ -1,25 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw.h                                             :+:      :+:    :+:   */
+/*   xpm_file_to_img.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:34:19 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/15 15:39:00 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/15 15:39:07 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DRAW_H
-# define DRAW_H
-
-# include "struct.h"
-# include "utils.h"
-# include "mlx.h"
-
-// draw.c
-void	draw(t_data *data);
-
-void	init_mlx(t_data *data);
-
-#endif
+#include "draw.h"

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:30:33 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:50:06 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,9 +112,10 @@ struct s_texture
 // texture系の何か配列を追加するかも
 struct s_mlx
 {
-	void	*mlx;
-	void	*win;
-	t_img	*img;
+	void		*mlx;
+	void		*win;
+	t_img		*img;
+	t_texture	texture[4];
 };
 
 struct s_data

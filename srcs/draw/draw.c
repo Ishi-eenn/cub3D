@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:25:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:33:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,6 @@ int	key_press(int keycode, t_data *data)
 		exit(0);
 	}
 	return (0);
-}
-
-void	init_mlx(t_data *data)
-{
-	data->mlx->mlx = mlx_init();
-	if (!data->mlx->mlx)
-		print_error_and_exit("mlx_init failed\n");
-	data->mlx->win = mlx_new_window(data->mlx->mlx,
-			WINDOW_WIDTH, WINDOW_HEIGHT, "Cub3D");
-	if (!data->mlx->win)
-		print_error_and_exit("mlx_new_window failed\n");
 }
 
 	// その他のmlx系の初期化
