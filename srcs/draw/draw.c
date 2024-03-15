@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/13 17:41:22 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 14:53:53 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void draw(t_data *data)
 	// mlx_loop_hookとかで描画
 	// mlx_hookとかでイベント処理
 
-	// 第3引数なんだっけ？
 	mlx_hook(data->mlx->win, 2, 1L << 0, key_press, data);
 	mlx_hook(data->mlx->win, 17, 0, closed_window, data->mlx);
 	mlx_loop(data->mlx->mlx);

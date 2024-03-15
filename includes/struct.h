@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:12:19 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:04:40 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_texture_path	t_texture_path;
 typedef struct s_room_color		t_room_color;
 typedef struct s_map			t_map;
 typedef struct s_cub			t_cub;
+typedef struct s_img			t_img;
 typedef struct s_mlx			t_mlx;
 typedef struct s_data			t_data;
 
@@ -85,6 +86,14 @@ struct s_cub
 	t_texture_path	*texture_path;
 	t_room_color	*room_color;
 	t_map			*map;
+};
+
+struct s_img
+{
+	void	*img_ptr;
+	int		*bits_per_pixel;
+	int		*size_line;
+	int		*endian;
 };
 
 struct s_mlx
