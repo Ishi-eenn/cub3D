@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:23:18 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:30:33 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_room_color		t_room_color;
 typedef struct s_map			t_map;
 typedef struct s_cub			t_cub;
 typedef struct s_img			t_img;
+typedef struct s_texture		t_texture;
 typedef struct s_mlx			t_mlx;
 typedef struct s_data			t_data;
 
@@ -91,10 +92,21 @@ struct s_cub
 struct s_img
 {
 	void	*img_ptr;
-	int		*bits_per_pixel;
-	int		*size_line;
-	int		*endian;
 	char	*addr;
+	int		bits_per_pixel;
+	int		size_line;
+	int		endian;
+};
+
+struct s_texture
+{
+	void	*img_ptr;
+	char	*addr;
+	int		bits_per_pixel;
+	int		size_line;
+	int		endian;
+	int		width;
+	int		height;
 };
 
 // texture系の何か配列を追加するかも
