@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/12 16:24:18 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:23:35 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@
 # include "mlx.h"
 
 // draw.c
-void draw(t_data *data);
+void	draw(t_data *data);
 
 #endif
