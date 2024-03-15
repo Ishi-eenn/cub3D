@@ -5,12 +5,18 @@ INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
 LIBFT = libft/libft.a
 CC = cc
 
+HOOK_DIR	=	hook
+HOOK		=	closed_window.c \
+				key_press.c
+HOOKS		=	$(addprefix $(HOOK_DIR)/, $(HOOK))
+
 RAY_DIR		=	ray
 RAY			=	init.c
 RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
 
 DRAW_DIR	=	draw
-DRAW		=	$(RAYS) \
+DRAW		=	$(HOOKS) \
+				$(RAYS) \
 				draw.c \
 				init_mlx.c \
 				xpm_file_to_img.c
