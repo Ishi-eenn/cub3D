@@ -12,7 +12,8 @@ RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
 DRAW_DIR	=	draw
 DRAW		=	$(RAYS) \
 				draw.c \
-				init_mlx.c
+				init_mlx.c \
+				xpm_file_to_img.c
 DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
 
 MAP_DIR		=	map
