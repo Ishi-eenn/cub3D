@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 15:04:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/15 15:08:36 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ struct s_img
 	int		*bits_per_pixel;
 	int		*size_line;
 	int		*endian;
+	char	*addr;
 };
 
 struct s_mlx
