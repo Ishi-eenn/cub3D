@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 21:37:48 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 16:13:21 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/16 12:40:50 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static void	calculate_max_string_length_in_list(t_data *data, t_list *list)
 {
 	size_t	width;
 
+	data->cub->map->width = 0;
 	while (list)
 	{
 		width = ft_strlen(list->content);
