@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 22:27:48 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/16 15:32:28 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,6 @@ struct s_texture
 	int		height;
 };
 
-// texture系の何か配列を追加するかも
 struct s_mlx
 {
 	void		*mlx;
