@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/17 23:37:18 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 00:21:24 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,15 +109,6 @@ struct s_texture
 	int		width;
 	int		height;
 };
-
-// struct s_wall
-// {
-// 	int	side;
-// 	int	tex_x;
-// 	int	line_h;
-// 	int	draw_start;
-// 	int	draw_end;
-// };
 
 struct s_wall
 {

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:09:25 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/16 16:52:23 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 00:15:31 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ static void	find_and_init_player(t_data *data, size_t y_i, bool *player_found)
 			if (is_boundary_or_space_around(data, x_i, y_i))
 				print_error_and_exit("Player is not valid\n");
 			init_vector(data, data->cub->map->map_data[y_i][x_i], x_i, y_i);
+			data->cub->map->map_data[y_i][x_i] = '0';
 		}
 		else if (!find_occurrence("01 ", data->cub->map->map_data[y_i][x_i]))
 			print_error_and_exit("Map is not valid\n");
