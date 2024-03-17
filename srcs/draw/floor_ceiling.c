@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 21:31:45 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/17 21:40:16 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/17 21:50:33 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,36 @@
 
 void	draw_floor(t_data *data)
 {
-	int	x;
-	int	y;
+	int	x_i;
+	int	y_i;
 
-	y = WINDOW_HEIGHT / 2;
-	while (y < WINDOW_HEIGHT)
+	y_i = WINDOW_HEIGHT / 2;
+	while (y_i < WINDOW_HEIGHT)
 	{
-		x = 0;
-		while (x < WINDOW_WIDTH)
+		x_i = 0;
+		while (x_i < WINDOW_WIDTH)
 		{
-			my_mlx_pixel_put(data, x, y, data->cub->room_color->floor);
-			x++;
+			my_mlx_pixel_put(data, x_i, y_i, data->cub->room_color->floor);
+			x_i++;
 		}
-		y++;
+		y_i++;
 	}
 }
 
 void	draw_ceiling(t_data *data)
 {
-	int	x;
-	int	y;
+	int	x_i;
+	int	y_i;
 
-	y = 0;
-	while (y < WINDOW_HEIGHT / 2)
+	y_i = 0;
+	while (y_i < WINDOW_HEIGHT / 2)
 	{
-		x = 0;
-		while (x < WINDOW_WIDTH)
+		x_i = 0;
+		while (x_i < WINDOW_WIDTH)
 		{
-			my_mlx_pixel_put(data, x, y, data->cub->room_color->ceiling);
-			x++;
+			my_mlx_pixel_put(data, x_i, y_i, data->cub->room_color->ceiling);
+			x_i++;
 		}
-		y++;
+		y_i++;
 	}
 }
