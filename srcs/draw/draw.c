@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/17 21:45:02 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/17 22:23:16 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	draw_window(t_data *data)
 {
 	draw_ceiling(data);
 	draw_floor(data);
+	draw_minimap(data);
 	mlx_put_image_to_window(data->mlx->mlx,
 		data->mlx->win,
 		data->mlx->img.img_ptr,

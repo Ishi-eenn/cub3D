@@ -20,6 +20,7 @@ DRAW		=	$(HOOKS) \
 				draw.c \
 				floor_ceiling.c \
 				init_mlx.c \
+				minimap.c \
 				my_mlx_pixel_put.c \
 				xpm_file_to_img.c
 DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
