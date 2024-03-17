@@ -6,18 +6,18 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 00:00:05 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 01:21:52 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 01:25:21 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hook.h"
 
-void move_east(t_data *data)
+void	move_east(t_data *data)
 {
-	double new_x;
-	double new_y;
-	int position_x;
-	int position_y;
+	double	new_x;
+	double	new_y;
+	int		position_x;
+	int		position_y;
 
 	new_x = data->vector->position_x + data->vector->plane_x * 1.0 / 10;
 	new_y = data->vector->position_y + data->vector->plane_y * 1.0 / 10;
@@ -29,12 +29,12 @@ void move_east(t_data *data)
 		data->vector->position_y = new_y;
 }
 
-void move_north(t_data *data)
+void	move_north(t_data *data)
 {
-	double new_x;
-	double new_y;
-	int position_x;
-	int position_y;
+	double	new_x;
+	double	new_y;
+	int		position_x;
+	int		position_y;
 
 	new_x = data->vector->position_x + data->vector->direction_x * 1.0 / 10;
 	new_y = data->vector->position_y + data->vector->direction_y * 1.0 / 10;
@@ -46,12 +46,12 @@ void move_north(t_data *data)
 		data->vector->position_y = new_y;
 }
 
-void move_west(t_data *data)
+void	move_west(t_data *data)
 {
-	double new_x;
-	double new_y;
-	int position_x;
-	int position_y;
+	double	new_x;
+	double	new_y;
+	int		position_x;
+	int		position_y;
 
 	new_x = data->vector->position_x + data->vector->plane_x * -1.0 / 10;
 	new_y = data->vector->position_y + data->vector->plane_y * -1.0 / 10;
@@ -63,12 +63,12 @@ void move_west(t_data *data)
 		data->vector->position_y = new_y;
 }
 
-void move_south(t_data *data)
+void	move_south(t_data *data)
 {
-	double new_x;
-	double new_y;
-	int position_x;
-	int position_y;
+	double	new_x;
+	double	new_y;
+	int		position_x;
+	int		position_y;
 
 	new_x = data->vector->position_x + data->vector->direction_x * -1.0 / 10;
 	new_y = data->vector->position_y + data->vector->direction_y * -1.0 / 10;

@@ -24,6 +24,7 @@ DRAW		=	$(HOOKS) \
 				init_mlx.c \
 				minimap.c \
 				my_mlx_pixel_put.c \
+				test_draw.c \
 				xpm_file_to_img.c
 DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
 

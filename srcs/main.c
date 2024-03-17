@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:48:40 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 22:51:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 01:27:00 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,10 @@ int	main(int argc, char **argv)
 }
 
 #ifdef DEBUG
-__attribute__((destructor)) static void destructor() {
+
+__attribute__((destructor)) static void	destructor(void)
+{
 	system("leaks -q cub3D");
 }
+
 #endif
