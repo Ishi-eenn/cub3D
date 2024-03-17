@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/16 15:32:28 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/17 23:37:18 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_map			t_map;
 typedef struct s_cub			t_cub;
 typedef struct s_img			t_img;
 typedef struct s_texture		t_texture;
+typedef struct s_wall			t_wall;
 typedef struct s_mlx			t_mlx;
 typedef struct s_data			t_data;
 
@@ -107,6 +108,23 @@ struct s_texture
 	int		endian;
 	int		width;
 	int		height;
+};
+
+// struct s_wall
+// {
+// 	int	side;
+// 	int	tex_x;
+// 	int	line_h;
+// 	int	draw_start;
+// 	int	draw_end;
+// };
+
+struct s_wall
+{
+	double	perp_wall_dist;
+	int		line_height;
+	int		draw_start;
+	int		draw_end;
 };
 
 struct s_mlx
