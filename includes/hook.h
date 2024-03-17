@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 22:46:43 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 00:22:20 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 01:13:57 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void move_west(t_data *data);
 void move_south(t_data *data);
 void move_north(t_data *data);
 
-
+void	rotate_clockwise(t_data *data);
+void	rotate_counterclockwise(t_data *data);
 
 #endif

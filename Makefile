@@ -8,7 +8,8 @@ CC = cc
 HOOK_DIR	=	hook
 HOOK		=	closed_window.c \
 				key_press.c \
-				move.c
+				move.c \
+				rotate.c
 HOOKS		=	$(addprefix $(HOOK_DIR)/, $(HOOK))
 
 RAY_DIR		=	ray

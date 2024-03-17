@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 22:45:57 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 00:42:55 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 01:14:16 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ int	key_press(int keycode, t_data *data)
 		mlx_destroy_window(data->mlx->mlx, data->mlx->win);
 		exit(0);
 	}
+	if (keycode == 123)
+		rotate_counterclockwise(data);
+	if (keycode == 124)
+		rotate_clockwise(data);
 	return (0);
 }
