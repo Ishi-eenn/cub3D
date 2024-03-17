@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 22:51:34 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/17 21:39:25 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@
 # include "mlx.h"
 
 // draw.c
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 void	draw(t_data *data);
+
+void	draw_ceiling(t_data *data);
+void	draw_floor(t_data *data);
 
 void	init_mlx(t_data *data);
 
