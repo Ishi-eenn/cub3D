@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:13:32 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/15 22:41:04 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 03:58:01 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Copilotで出てきた順で適当に書いたから順番は後から変えるかもしれない
 // あとでdefineで定義する
-void	init_texture(t_data *data)
+static void	init_texture(t_data *data)
 {
 	xpm_file_to_img(data,
 		&data->mlx->texture[0],
@@ -30,7 +30,7 @@ void	init_texture(t_data *data)
 		data->cub->texture_path->east);
 }
 
-void	init_img(t_data *data)
+static void	init_img(t_data *data)
 {
 	data->mlx->img.img_ptr = mlx_new_image(data->mlx->mlx,
 			WINDOW_WIDTH,

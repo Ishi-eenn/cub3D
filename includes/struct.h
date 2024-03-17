@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 00:21:24 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 04:00:41 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_cub			t_cub;
 typedef struct s_img			t_img;
 typedef struct s_texture		t_texture;
 typedef struct s_wall			t_wall;
+typedef struct s_mouse			t_mouse;
 typedef struct s_mlx			t_mlx;
 typedef struct s_data			t_data;
 
@@ -118,12 +119,19 @@ struct s_wall
 	int		draw_end;
 };
 
+struct s_mouse
+{
+	int	button;
+	int	x;
+};
+
 struct s_mlx
 {
 	void		*mlx;
 	void		*win;
 	t_img		img;
 	t_texture	texture[4];
+	t_mouse		mouse;
 };
 
 struct s_data

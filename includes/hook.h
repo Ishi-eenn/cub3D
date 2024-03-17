@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 22:46:43 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 01:23:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 03:59:44 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int		closed_window(t_mlx *mlx);
 
 // key_press.c
 int		key_press(int keycode, t_data *data);
+
+// mouse.c
+int		mouse_press(int button, int x, int y, t_data *data);
+int		mouse_release(int button, int x, int y, t_data *data);
+int		mouse_rotate(int x, int y, t_data *data);
 
 // move.c
 void	move_east(t_data *data);
