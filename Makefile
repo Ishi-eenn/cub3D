@@ -7,7 +7,9 @@ CC = cc
 
 HOOK_DIR	=	hook
 HOOK		=	closed_window.c \
-				key_press.c
+				key_press.c \
+				move.c \
+				rotate.c
 HOOKS		=	$(addprefix $(HOOK_DIR)/, $(HOOK))
 
 RAY_DIR		=	ray
@@ -22,6 +24,7 @@ DRAW		=	$(HOOKS) \
 				init_mlx.c \
 				minimap.c \
 				my_mlx_pixel_put.c \
+				test_draw.c \
 				xpm_file_to_img.c
 DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
 
