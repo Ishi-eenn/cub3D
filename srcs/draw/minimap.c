@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:21:02 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/17 22:46:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 04:27:15 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,19 @@ static void	mlx_block_put(t_data *data, int x, int y, int color)
 	}
 }
 
-static bool	is_player(char c)
-{
-	return (c == 'W' || c == 'E' || c == 'S' || c == 'N');
-}
-
 static int	get_map_element_color(t_data *data, int x, int y)
 {
-	if (data->cub->map->map_data[y][x] == '1')
+	int	position_x;
+	int	position_y;
+
+	position_x = (int)data->vector->position_x;
+	position_y = (int)data->vector->position_y;
+	if (x == position_x && y == position_y)
+		return (PLAYER_COLOR);
+	else if (data->cub->map->map_data[y][x] == '1')
 		return (WALL_COLOR);
 	else if (data->cub->map->map_data[y][x] == '0')
 		return (FLOOR_COLOR);
-	else if (is_player(data->cub->map->map_data[y][x]))
-		return (PLAYER_COLOR);
 	else
 		return (BACKGROUND);
 }
