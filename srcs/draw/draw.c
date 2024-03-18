@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 03:38:52 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:12:39 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	draw_window(t_data *data)
 		calculate_step_and_side_dist(data, &ray);
 		perform_dda(data, &ray);
 		calculate_wall_height(data, &ray, &wall);
-		draw_wall(data, &wall, x_i);
+		draw_wall(data, &ray, &wall, x_i);
 		x_i++;
 	}
 	draw_minimap(data);

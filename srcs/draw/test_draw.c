@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:29:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 01:33:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/18 11:44:40 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,24 +93,22 @@ void	calculate_wall_height(t_data *data, t_ray *ray, t_wall *wall)
 		wall->draw_end = WINDOW_HEIGHT - 1;
 }
 
-void	draw_wall(t_data *data, t_wall *wall, int x)
+void	draw_wall(t_data *data, t_ray *ray, t_wall *wall, int x)
 {
 	int	y;
+	unsigned int color;
 
+	(void)ray;
 	y = 0;
-	while (y < wall->draw_start)
+	while(y < WINDOW_HEIGHT)
 	{
-		my_mlx_pixel_put(data, x, y, data->cub->room_color->ceiling);
-		y++;
-	}
-	while (y < wall->draw_end)
-	{
-		my_mlx_pixel_put(data, x, y, 0x000000);
-		y++;
-	}
-	while (y < WINDOW_HEIGHT)
-	{
-		my_mlx_pixel_put(data, x, y, data->cub->room_color->floor);
+		if (y < wall->draw_start)
+			color = data->cub->room_color->ceiling;
+		else if (y < wall->draw_end)
+			color = 0x000000;
+		else
+			color = data->cub->room_color->floor;
+		my_mlx_pixel_put(data, x, y, color);
 		y++;
 	}
 }
