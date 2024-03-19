@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:13:32 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 04:20:05 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 04:30:36 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 static void	init_texture(t_data *data)
 {
 	xpm_file_to_img(data,
-		&data->mlx->texture[3],
+		&data->mlx->texture[NORTH_INDEX],
 		data->cub->texture_path->north);
 	xpm_file_to_img(data,
-		&data->mlx->texture[2],
+		&data->mlx->texture[SOUTH_INDEX],
 		data->cub->texture_path->south);
 	xpm_file_to_img(data,
-		&data->mlx->texture[1],
+		&data->mlx->texture[WEST_INDEX],
 		data->cub->texture_path->west);
 	xpm_file_to_img(data,
-		&data->mlx->texture[0],
+		&data->mlx->texture[EAST_INDEX],
 		data->cub->texture_path->east);
 }
 

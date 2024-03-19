@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 04:28:47 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 04:29:45 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 # define BACKGROUND 0xFFFFFF
 # define PIXEL 64
 # define NORTH_INDEX 3
-# define SOUTH_INDEX 1
-# define WEST_INDEX 2
+# define SOUTH_INDEX 2
+# define WEST_INDEX 1
 # define EAST_INDEX 0
 
 // draw_texture.c
