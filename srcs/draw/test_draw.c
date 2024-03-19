@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:29:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 11:44:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/19 20:47:36 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,8 @@ void	draw_wall(t_data *data, t_ray *ray, t_wall *wall, int x)
 		if (y < wall->draw_start)
 			color = data->cub->room_color->ceiling;
 		else if (y < wall->draw_end)
-			color = 0x000000;
+			color = title2(data, ray, wall, y);
+			// color = 0x000000;
 		else
 			color = data->cub->room_color->floor;
 		my_mlx_pixel_put(data, x, y, color);

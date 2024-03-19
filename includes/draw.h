@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 11:26:32 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/19 20:47:24 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@
 # define SCALE 10
 
 // draw_texture.c
-unsigned int	*title(t_texture *texture, int y, int x);
 unsigned int	title2(t_data *data, t_ray *ray, t_wall *wall, int x);
-
 // draw.c
 void	draw(t_data *data);
 
