@@ -20,6 +20,7 @@ RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
 DRAW_DIR	=	draw
 DRAW		=	$(HOOKS) \
 				$(RAYS) \
+				draw_texture.c \
 				draw.c \
 				floor_ceiling.c \
 				init_mlx.c \
