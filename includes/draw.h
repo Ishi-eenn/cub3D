@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/19 20:56:27 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/19 23:02:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 
 // draw_texture.c
 unsigned int	*get_pixel_color(t_texture *texture, int y, int x);
-unsigned int	title2(t_data *data, t_ray *ray, t_wall *wall, int x);
+
 // draw.c
 void	draw(t_data *data);
 

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:29:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/19 21:51:42 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/19 23:37:40 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,9 +98,9 @@ double	title11(t_data *data, t_ray *ray)
 void	calculate_wall_height(t_data *data, t_ray *ray, t_wall *wall)
 {
 	double wall_x = title11(data, ray);
-	int pixcel = 16;
+	int pixcel = 64;
 
-	wall_x += floor(wall_x);
+	wall_x -= floor(wall_x);
 	wall->line_height = (int)(WINDOW_HEIGHT / ray->perp_wall_dist);
 	wall->side = ray->side;
 	wall->texture_x = (int)(wall_x * (double)pixcel);
@@ -118,18 +118,27 @@ void	calculate_wall_height(t_data *data, t_ray *ray, t_wall *wall)
 
 void	draw_wall(t_data *data, t_ray *ray, t_wall *wall, int x)
 {
-	int	y;
-	unsigned int color;
-
+	double	step;
+	double	tex_pos;
+	int		tex_y;
+	unsigned int	color;
+	int		pixel = 64;
+	int y = 0;
 	(void)ray;
-	y = 0;
-	while(y < WINDOW_HEIGHT)
+	(void)x;
+
+	step = 1.0 * pixel / wall->line_height;
+	tex_pos = (wall->draw_start - WINDOW_HEIGHT / 2 + wall->line_height / 2) * step;
+	while (y < WINDOW_HEIGHT)
 	{
 		if (y < wall->draw_start)
 			color = data->cub->room_color->ceiling;
 		else if (y < wall->draw_end)
-			color = title2(data, ray, wall, y);
-			// color = 0x000000;
+		{
+			tex_y = (int)tex_pos & (pixel - 1);
+			tex_pos += step;
+			color = *get_pixel_color(&data->mlx->texture[wall->side], tex_y, wall->texture_x);
+		}
 		else
 			color = data->cub->room_color->floor;
 		my_mlx_pixel_put(data, x, y, color);
