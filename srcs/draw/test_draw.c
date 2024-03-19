@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 01:29:21 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/19 23:37:40 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:24:18 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,8 @@ double	title11(t_data *data, t_ray *ray)
 	{
 		ray->perp_wall_dist = (ray->map_x - data->vector->position_x
 				+ (1 - ray->step_x) / 2) / ray->ray_dir_x;
-		return (data->vector->position_y + ray->perp_wall_dist * ray->ray_dir_y);
+		return (data->vector->position_y
+			+ ray->perp_wall_dist * ray->ray_dir_y);
 	}
 	ray->perp_wall_dist = (ray->map_y - data->vector->position_y
 			+ (1 - ray->step_y) / 2) / ray->ray_dir_y;
@@ -97,9 +98,11 @@ double	title11(t_data *data, t_ray *ray)
 
 void	calculate_wall_height(t_data *data, t_ray *ray, t_wall *wall)
 {
-	double wall_x = title11(data, ray);
-	int pixcel = 64;
+	double	wall_x;
+	int		pixcel;
 
+	pixcel = 64;
+	wall_x = title11(data, ray);
 	wall_x -= floor(wall_x);
 	wall->line_height = (int)(WINDOW_HEIGHT / ray->perp_wall_dist);
 	wall->side = ray->side;
