@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/19 21:14:58 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:42:31 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,8 @@ typedef struct s_wall
 	int		draw_end;
 	int		side;
 	int		texture_x;
+	double	texture_position;
+	double	step;
 }				t_wall;
 
 struct s_mouse
