@@ -6,14 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:11:39 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 22:20:59 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 04:20:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parser.h"
-
-// I'm not sure it's right, so I'll check later.
-// Maybe it's right!
 
 void	init_vector(t_data *data, char c, int x, int y)
 {
