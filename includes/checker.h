@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 21:20:35 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 17:48:38 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/11 21:33:07 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/15 22:50:20 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map.h"
+#ifndef CHECKER_H
+# define CHECKER_H
 
-void	parse_and_set_map_from_fd(t_data *data, int fd)
-{
-	t_list	*list;
+# include "stdbool.h"
 
-	data->cub->map = malloc(sizeof(t_map));
-	if (data->cub->map == NULL)
-		print_error_and_exit("Memory allocation failed.");
-	list = read_lines_into_linked_list(fd);
-	validate_and_set_map_properties(data, list);
-	data->cub->map->map_data = convert_list_to_aligned_string_array(list, data);
-	ft_lstclear(&list, free);
-}
+# include "struct.h"
+# include "utils.h"
+# include "parser.h"
+
+// check_closed.c
+void	validate_map_walkability(t_data *data);
+
+// check_map.c
+void	check_input_data(t_data *data);
+
+// check_player.c
+void	scan_map_and_check_player(t_data *data);
+
+#endif

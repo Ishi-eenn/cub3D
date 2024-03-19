@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   draw_texture.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 21:20:35 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 17:48:38 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/18 10:57:41 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/19 23:26:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map.h"
+#include "draw.h"
 
-void	parse_and_set_map_from_fd(t_data *data, int fd)
+unsigned int	*get_pixel_color(t_texture *texture, int y, int x)
 {
-	t_list	*list;
+	char	*dst;
 
-	data->cub->map = malloc(sizeof(t_map));
-	if (data->cub->map == NULL)
-		print_error_and_exit("Memory allocation failed.");
-	list = read_lines_into_linked_list(fd);
-	validate_and_set_map_properties(data, list);
-	data->cub->map->map_data = convert_list_to_aligned_string_array(list, data);
-	ft_lstclear(&list, free);
+	dst = texture->addr + (y * texture->size_line + x * (texture->bits_per_pixel / 8));
+	return ((unsigned int *)dst);
 }

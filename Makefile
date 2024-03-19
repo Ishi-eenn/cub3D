@@ -5,6 +5,31 @@ INCLUDES = -I ./includes -I ./libft/includes -I ./mlx
 LIBFT = libft/libft.a
 CC = cc
 
+HOOK_DIR	=	hook
+HOOK		=	closed_window.c \
+				key_press.c \
+				mouse.c \
+				move.c \
+				rotate.c
+HOOKS		=	$(addprefix $(HOOK_DIR)/, $(HOOK))
+
+RAY_DIR		=	ray
+RAY			=	init.c
+RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
+
+DRAW_DIR	=	draw
+DRAW		=	$(HOOKS) \
+				$(RAYS) \
+				draw_texture.c \
+				draw.c \
+				floor_ceiling.c \
+				init_mlx.c \
+				minimap.c \
+				my_mlx_pixel_put.c \
+				test_draw.c \
+				xpm_file_to_img.c
+DRAWS		=	$(addprefix $(DRAW_DIR)/, $(DRAW))
+
 MAP_DIR		=	map
 MAP			=	create_map_data.c \
 				list_operations.c \
@@ -14,9 +39,17 @@ MAP			=	create_map_data.c \
 				validation.c
 MAPS		=	$(addprefix $(MAP_DIR)/, $(MAP))
 
+CHECKER_DIR	=	checker
+CHECKER		=	check_closed.c \
+				check_map.c \
+				check_player.c
+CHECKERS	=	$(addprefix $(CHECKER_DIR)/, $(CHECKER))
+
 PARSER_DIR	=	parser
-PARSER		=	$(MAPS) \
+PARSER		=	$(CHECKERS) \
+				$(MAPS) \
 				file_name.c \
+				init_vector.c \
 				open_file.c \
 				parser.c \
 				rgb_handling.c \
@@ -26,6 +59,7 @@ PARSERS		=	$(addprefix $(PARSER_DIR)/, $(PARSER))
 
 UTIL_DIR	=	utils
 UTIL		=	cub_free.c \
+				find_occurrence.c \
 				is_overflow.c \
 				open.c \
 				print_error.c \
@@ -34,8 +68,9 @@ UTILS		=	$(addprefix $(UTIL_DIR)/, $(UTIL))
 
 SRC_DIR		=	srcs
 SRC			=	main.c \
-					$(PARSERS) \
-					$(UTILS)
+				$(DRAWS) \
+				$(PARSERS) \
+				$(UTILS)
 SRCS		=	$(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJ_DIR = objs

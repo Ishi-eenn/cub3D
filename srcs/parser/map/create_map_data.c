@@ -6,13 +6,13 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/08 22:07:15 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/08 22:16:29 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/11 20:30:07 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "map.h"
 
-static char *fill_string_to_width(t_data *data, char *line)
+static char	*fill_string_to_width(t_data *data, char *line)
 {
 	size_t	len;
 	size_t	diff;
@@ -28,14 +28,14 @@ static char *fill_string_to_width(t_data *data, char *line)
 	return (fill);
 }
 
-static char *align_string_with_width(t_data *data, char *line)
+static char	*align_string_with_width(t_data *data, char *line)
 {
-	char *fill;
-	char *aligned_string;
+	char	*fill;
+	char	*aligned_string;
 
 	fill = fill_string_to_width(data, line);
 	aligned_string = ft_strjoin(line, fill);
-	if(aligned_string == NULL)
+	if (aligned_string == NULL)
 		print_error_and_exit("malloc failed");
 	free(fill);
 	return (aligned_string);

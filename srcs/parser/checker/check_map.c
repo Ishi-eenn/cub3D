@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/08 21:20:35 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 17:48:38 by tsishika         ###   ########.fr       */
+/*   Created: 2024/03/10 21:25:23 by tsishika          #+#    #+#             */
+/*   Updated: 2024/03/11 21:37:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map.h"
+#include "checker.h"
 
-void	parse_and_set_map_from_fd(t_data *data, int fd)
+void	check_input_data(t_data *data)
 {
-	t_list	*list;
-
-	data->cub->map = malloc(sizeof(t_map));
-	if (data->cub->map == NULL)
-		print_error_and_exit("Memory allocation failed.");
-	list = read_lines_into_linked_list(fd);
-	validate_and_set_map_properties(data, list);
-	data->cub->map->map_data = convert_list_to_aligned_string_array(list, data);
-	ft_lstclear(&list, free);
+	validate_map_walkability(data);
+	scan_map_and_check_player(data);
 }

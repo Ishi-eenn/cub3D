@@ -1,8 +1,8 @@
 .vscode
 .DS_Store
 
-a.cub
 cub3D
 objs
 mlx/*.o
 mlx/libmlx.a
+imgs

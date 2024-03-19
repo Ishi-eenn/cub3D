@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:29:00 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:12:35 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/11 21:35:43 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	parser(int argc, char **argv, t_data *data)
 	validate_and_exit_if_not_empty(fd);
 	parse_and_set_map_from_fd(data, fd);
 	close(fd);
+	check_input_data(data);
 }
