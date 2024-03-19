@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 22:45:57 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 01:14:16 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:53:10 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	key_press(int keycode, t_data *data)
 		move_south(data);
 	if (keycode == 2)
 		move_east(data);
+	if (keycode == 3)
+		data->mlx->map = !data->mlx->map;
 	if (keycode == 13)
 		move_north(data);
 	if (keycode == 53)

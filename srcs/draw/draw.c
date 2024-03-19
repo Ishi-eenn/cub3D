@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:03 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 01:40:03 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:18:04 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int	draw_window(t_data *data)
 		draw_wall(data, &wall, x_i);
 		x_i++;
 	}
-	draw_minimap(data);
+	if (data->mlx->map)
+		draw_minimap(data);
 	mlx_put_image_to_window(data->mlx->mlx,
 		data->mlx->win,
 		data->mlx->img.img_ptr,

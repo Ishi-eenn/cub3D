@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 16:11:24 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 01:34:02 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:35:15 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,15 @@
 
 # include "mlx.h"
 
-// minimap
 # define WALL_COLOR 0x00FF00
 # define FLOOR_COLOR 0x0000FF
 # define PLAYER_COLOR 0xFF0000
 # define BACKGROUND 0xFFFFFF
-# define SCALE 10
 # define PIXEL 64
+# define NORTH_INDEX 3
+# define SOUTH_INDEX 1
+# define WEST_INDEX 2
+# define EAST_INDEX 0
 
 // draw_texture.c
 unsigned int	*get_pixel_color(t_texture *texture, int y, int x);

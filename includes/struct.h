@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 01:42:31 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:33:15 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define STRUCT_H
 
 # include <stddef.h>
+# include <stdbool.h>
 
 typedef enum e_size				t_size;
 
@@ -81,6 +82,8 @@ struct s_map
 {
 	size_t	width;
 	size_t	height;
+	size_t	larger_length;
+	int		scale;
 	char	**map_data;
 };
 
@@ -135,6 +138,7 @@ struct s_mlx
 	t_img		img;
 	t_texture	texture[4];
 	t_mouse		mouse;
+	bool		map;
 };
 
 struct s_data
