@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:17:33 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:28:08 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:50 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 void	print_error(char *str)
 {

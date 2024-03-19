@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:56:45 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/27 17:57:28 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:44 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 void	check_and_exit_if_directory(char *file)
 {

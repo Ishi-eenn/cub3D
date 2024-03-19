@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 01:02:43 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 01:11:27 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 static void	texture_path_free(t_texture_path *texture_path)
 {

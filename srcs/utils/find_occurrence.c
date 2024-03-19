@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 21:16:00 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 22:20:18 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:37 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 char	*find_occurrence(const char *s, int c)
 {
