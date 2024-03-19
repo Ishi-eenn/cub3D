@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:14:17 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/20 02:33:15 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 04:06:27 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ struct s_texture
 	int		height;
 };
 
-typedef struct s_wall
+struct s_wall
 {
 	int		line_height;
 	int		draw_start;
@@ -123,7 +123,7 @@ typedef struct s_wall
 	int		texture_x;
 	double	texture_position;
 	double	step;
-}				t_wall;
+};
 
 struct s_mouse
 {
