@@ -6,27 +6,25 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 15:13:32 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 03:58:01 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 04:30:36 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "draw.h"
 
-// Copilotで出てきた順で適当に書いたから順番は後から変えるかもしれない
-// あとでdefineで定義する
 static void	init_texture(t_data *data)
 {
 	xpm_file_to_img(data,
-		&data->mlx->texture[0],
+		&data->mlx->texture[NORTH_INDEX],
 		data->cub->texture_path->north);
 	xpm_file_to_img(data,
-		&data->mlx->texture[1],
+		&data->mlx->texture[SOUTH_INDEX],
 		data->cub->texture_path->south);
 	xpm_file_to_img(data,
-		&data->mlx->texture[2],
+		&data->mlx->texture[WEST_INDEX],
 		data->cub->texture_path->west);
 	xpm_file_to_img(data,
-		&data->mlx->texture[3],
+		&data->mlx->texture[EAST_INDEX],
 		data->cub->texture_path->east);
 }
 
@@ -56,4 +54,5 @@ void	init_mlx(t_data *data)
 		print_error_and_exit("mlx_new_window failed\n");
 	init_texture(data);
 	init_img(data);
+	data->mlx->map = true;
 }

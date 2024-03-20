@@ -14,7 +14,9 @@ HOOK		=	closed_window.c \
 HOOKS		=	$(addprefix $(HOOK_DIR)/, $(HOOK))
 
 RAY_DIR		=	ray
-RAY			=	init.c
+RAY			=	calc.c \
+				dda.c \
+				init.c
 RAYS		=	$(addprefix $(RAY_DIR)/, $(RAY))
 
 DRAW_DIR	=	draw

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:21:02 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/18 04:27:15 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:39:14 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ static void	mlx_block_put(t_data *data, int x, int y, int color)
 {
 	int	x_i;
 	int	y_i;
+	int	scale;
 
 	x_i = 0;
-	while (x_i < SCALE)
+	scale = data->cub->map->scale;
+	while (x_i < scale)
 	{
 		y_i = 0;
-		while (y_i < SCALE)
+		while (y_i < scale)
 		{
-			my_mlx_pixel_put(data, x * SCALE + x_i, y * SCALE + y_i, color);
+			my_mlx_pixel_put(data, x * scale + x_i, y * scale + y_i, color);
 			y_i++;
 		}
 		x_i++;

@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 02:31:11 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 00:54:47 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:40 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 bool	is_atoi_overflow(char *line)
 {

@@ -6,7 +6,7 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 05:22:07 by tsishika          #+#    #+#             */
-/*   Updated: 2024/03/10 21:06:25 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 02:41:30 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 
 # include <stdbool.h>
 
-# define MAX_MAP_WIDTH 200
-# define MAX_MAP_HEIGHT 200
+# define MAX_MAP_WIDTH 100
+# define MAX_MAP_HEIGHT 100
+# define MAX_SCALE 10
 
 // create_map_data.c
 char	**convert_list_to_aligned_string_array(t_list *list, t_data *data);

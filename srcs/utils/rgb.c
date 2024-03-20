@@ -6,11 +6,11 @@
 /*   By: tsishika <tsishika@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 15:55:49 by tsishika          #+#    #+#             */
-/*   Updated: 2024/02/28 00:54:36 by tsishika         ###   ########.fr       */
+/*   Updated: 2024/03/20 01:50:55 by tsishika         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
+#include "cub3d.h"
 
 int	combine_rgb_components(char *red, char *green, char *blue)
 {
